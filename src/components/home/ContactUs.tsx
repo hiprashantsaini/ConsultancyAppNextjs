@@ -92,7 +92,7 @@ const ContactUs = () => {
                     >
                         <div className="relative overflow-hidden rounded-3xl shadow-lg">
                             <img
-                                src="/contactUsImage.jpg"
+                                src="/contactUs.jpg"
                                 alt='Team meeting discussion'
                                 className="w-full h-[500px] object-cover"
                             />
@@ -107,7 +107,7 @@ const ContactUs = () => {
                         viewport={{ once: true }}
                         variants={fadeInRight}
                     >
-                        <div className="bg-white rounded-3xl p-8 shadow-lg">
+                        <div className="bg-white rounded-3xl p-7 shadow-lg">
                             {/* Header */}
                             <div className="mb-8">
                                 <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
@@ -119,7 +119,7 @@ const ContactUs = () => {
                             </div>
 
                             {/* Contact Form */}
-                            <div onSubmit={handleSubmit} className="space-y-6">
+                            <div onSubmit={handleSubmit} className="space-y-4">
                                 {/* Email Input */}
                                 <div>
                                     <input
@@ -129,7 +129,7 @@ const ContactUs = () => {
                                         onChange={handleChange}
                                         placeholder="Your Email ID"
                                         required
-                                        className="w-full border border-gray-200 rounded-2xl px-6 py-4 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                        className="w-full border border-gray-200 rounded-xl px-6 py-2 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                                     />
                                 </div>
 
@@ -142,7 +142,7 @@ const ContactUs = () => {
                                         onChange={handleChange}
                                         placeholder="Subject"
                                         required
-                                        className="w-full border border-gray-200 rounded-2xl px-6 py-4 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                        className="w-full border border-gray-200 rounded-xl px-6 py-2 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                                     />
                                 </div>
 
@@ -153,9 +153,9 @@ const ContactUs = () => {
                                         value={formData.message}
                                         onChange={handleChange}
                                         placeholder="Your Message"
-                                        rows={6}
+                                        rows={5}
                                         required
-                                        className="w-full border border-gray-200 rounded-2xl px-6 py-4 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                                        className="w-full border border-gray-200 rounded-xl px-6 py-2 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
                                     />
                                 </div>
 
@@ -163,7 +163,7 @@ const ContactUs = () => {
                                 {!isSubmitting ? <button
                                     type="submit"
                                     onClick={handleSubmit}
-                                    className="w-full bg-gray-800 text-white rounded-2xl py-4 font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all duration-200 text-lg cursor-pointer"
+                                    className="w-full bg-gray-800 text-white rounded-xl py-2 font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all duration-200 text-lg cursor-pointer"
                                 >
                                     Submit
                                 </button>
