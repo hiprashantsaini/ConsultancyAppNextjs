@@ -38,6 +38,12 @@ const ContactUs = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        if(!formData.email || !formData.message || !formData.subject){
+            alert("All field are required");
+            return;
+        }
+
         setIsSubmitting(true);
         try {
             const response = await fetch('/api/contact-form', {
@@ -60,10 +66,12 @@ const ContactUs = () => {
                 setIsSubmitting(false);
             }else{
                 alert('Something went wrong. Please try again.');
+                setIsSubmitting(false);
             }
         } catch (error) {
                 console.log("error :",error);
                 alert('Something went wrong. Please try again.');
+                setIsSubmitting(false);
         }
         console.log('Contact Form:', formData);
         alert('Thank you! We will get back to you soon.');

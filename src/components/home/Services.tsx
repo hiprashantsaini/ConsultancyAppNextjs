@@ -19,7 +19,8 @@ const Services = () => {
     {
       icon: Building2,
       title: "Hiring for Companies",
-      description: "End-to-end recruitment solutions for businesses of all sizes. We connect you with top talent across various industries.",
+      // description: "End-to-end recruitment solutions for businesses of all sizes. We connect you with top talent across various industries.",
+      description: "End-to-end recruitment solutions for businesses of all sizes. We connect you with top talent across industries.",
       color: "bg-blue-500"
     },
     {

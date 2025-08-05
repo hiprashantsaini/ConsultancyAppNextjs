@@ -7,9 +7,9 @@ import { useEffect, useRef, useState } from 'react'
 const videos = [
   '/testimonial2.mp4',
   '/testimonial1.mp4',
+  '/testimonial3.mp4',
+  '/testimonial2.mp4',
   '/testimonial1.mp4',
-  '/testimonial2.mp4',
-  '/testimonial2.mp4',
 ]
 
 export default function ProfessionalTestimonials() {

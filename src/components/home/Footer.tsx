@@ -51,10 +51,10 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-2">
-              <Phone size={16} /> +91 8791318483
+              <Phone size={16} /> +91 8445734331
             </li>
             <li className="flex items-center gap-2">
-              <Mail size={16} /> support@jobnest.com
+              <Mail size={16} /> support@saviortech.in
             </li>
             <li className="flex items-center gap-2">
               <MapPin size={16} /> New Delhi, India
@@ -69,7 +69,7 @@ export default function Footer() {
             {[ 
               { Icon: Facebook, link: "#" },
               { Icon: Linkedin, link: "#" },
-              { Icon: Instagram, link: "#" },
+              { Icon: Instagram, link: "https://www.instagram.com/saviorhires?igsh=YWQ2dXI4Mjl2b3Vm" },
             ].map(({ Icon, link }, idx) => (
               <motion.a
                 key={idx}
