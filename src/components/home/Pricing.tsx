@@ -8,6 +8,7 @@ import {
   X,
   Zap
 } from 'lucide-react';
+import Link from 'next/link';
 import { useState } from 'react';
 import PlanRequest from './PlanRequest';
 
@@ -200,7 +201,7 @@ const Pricing = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
+    <section id='plans' className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
@@ -408,13 +409,13 @@ const Pricing = () => {
           <p className="text-gray-300 mb-6">
             Need a custom solution? We are here to help you succeed.
           </p>
-          <motion.button
-            className="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
+          <motion.p
+            className="bg-white text-gray-900 px-8 py-3 w-48 mx-auto rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Contact Sales
-          </motion.button>
+            <Link href="/#contact">Contact Sales</Link>
+          </motion.p>
         </motion.div>
       </div>
 

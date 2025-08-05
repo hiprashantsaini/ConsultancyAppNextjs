@@ -159,10 +159,12 @@
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import PlanRequest from "./PlanRequest";
 
 const Header = () => {
     const [showSideBar, setShowSideBar] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [open, setOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -259,14 +261,18 @@ const Header = () => {
                     Blog
                 </p> */}
 
-                <a href="#contact" className="text-gray-700 hover:text-black font-medium transition-colors duration-200">
-                    contact
-                </a>
+                <Link href="/#contact" className="text-gray-700 hover:text-black font-medium transition-colors duration-200">
+                    Contact
+                </Link>
+
+                <Link href="/#plans" className="text-gray-700 hover:text-black font-medium transition-colors duration-200">
+                    Plans
+                </Link>
             </div>
 
             {/* Apply Now Button */}
             <div className="hidden lg:block">
-                <p className="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors duration-200">
+                <p onClick={() => setOpen(true)} className="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors duration-200 cursor-pointer">
                     Apply Now
                 </p>
             </div>
@@ -307,18 +313,24 @@ const Header = () => {
                             Blog
                         </button> */}
 
-                        <a href="#contact" className="text-left px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-black font-medium transition-colors duration-200">
+                        <Link href="/#contact" className="text-left px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-black font-medium transition-colors duration-200">
                             Contact
-                        </a>
+                        </Link>
+
+                        <Link href="/#plans" className="text-left px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-black font-medium transition-colors duration-200">
+                            Plans
+                        </Link>
 
                         <div className="px-6 py-3">
-                            <button className="w-full bg-black text-white py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors duration-200">
+                            <button onClick={() => setOpen(true)} className="w-full bg-black text-white py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors duration-200 cursor-pointer">
                                 Apply Now
                             </button>
                         </div>
                     </div>
                 </div>
             )}
+
+            <PlanRequest isOpen={open} onClose={() => setOpen(false)} />
         </div>
     )
 }

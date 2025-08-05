@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -22,16 +22,27 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            {["Plans", "Services", "About Us", "Contact"].map((item, idx) => (
+            {["Plans", "Services", "About Us", "Contact"].map((item, idx) => {
+              let href=''
+              if(item==='Plans'){
+                href='/#plans';
+              }else if (item==='Services'){
+                href='/services'
+              }else if (item==='About Us'){
+                href='/about';
+              }else if (item==='Contact'){
+                href='/#contact';
+              }
+              return (
               <li key={idx}>
                 <Link
-                  href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={`${href}`}
                   className="hover:text-white transition-colors"
                 >
                   {item}
                 </Link>
               </li>
-            ))}
+            )})}
           </ul>
         </div>
 
@@ -40,7 +51,7 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-2">
-              <Phone size={16} /> +91 98765 43210
+              <Phone size={16} /> +91 8791318483
             </li>
             <li className="flex items-center gap-2">
               <Mail size={16} /> support@jobnest.com
@@ -59,7 +70,6 @@ export default function Footer() {
               { Icon: Facebook, link: "#" },
               { Icon: Linkedin, link: "#" },
               { Icon: Instagram, link: "#" },
-              { Icon: Twitter, link: "#" }
             ].map(({ Icon, link }, idx) => (
               <motion.a
                 key={idx}
@@ -78,7 +88,7 @@ export default function Footer() {
 
       {/* Bottom */}
       <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} JobNest Consultancy. All rights reserved.
+        © {new Date().getFullYear()} Savior hire. All rights reserved.
       </div>
     </footer>
   );

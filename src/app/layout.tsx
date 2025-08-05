@@ -34,6 +34,7 @@
 //   );
 // }
 
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ScrollToTop from "@/components/ScrollToTop";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -56,6 +57,7 @@ export default function RootLayout({
       >
         <ScrollToTop/>
         {children}
+        <FloatingWhatsApp/>
       </body>
     </html>
   );

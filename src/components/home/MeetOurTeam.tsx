@@ -33,7 +33,7 @@ const MeetOurTeam = () => {
         {
             name: "Yogesh Yadav",
             role: "Co-Founder",
-            image: "/roshan.png"
+            image: "/yogesh.png"
         }
     ];
 
@@ -104,7 +104,7 @@ const MeetOurTeam = () => {
                 </motion.div>
 
                 {/* See More Button */}
-                <motion.div 
+                {/* <motion.div 
                     className="text-center"
                     initial="initial"
                     whileInView="animate"
@@ -114,7 +114,7 @@ const MeetOurTeam = () => {
                     <button className="bg-white text-gray-800 px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors duration-200 shadow-lg">
                         See more
                     </button>
-                </motion.div>
+                </motion.div> */}
             </div>
         </div>
     );
