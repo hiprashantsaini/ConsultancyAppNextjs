@@ -8,8 +8,9 @@ const videos = [
   '/testimonial2.mp4',
   '/testimonial1.mp4',
   '/testimonial3.mp4',
+  '/testimonial4.mp4',
+  '/testimonial5.mp4',
   '/testimonial2.mp4',
-  '/testimonial1.mp4',
 ]
 
 export default function ProfessionalTestimonials() {

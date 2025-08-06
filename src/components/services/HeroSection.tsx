@@ -1,9 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import PlanRequest from '../home/PlanRequest';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -13,9 +15,9 @@ const HeroSection = () => {
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img 
-          src="/services.jpg" 
-          alt="Professional handshake in office" 
+        <img
+          src="/services.jpg"
+          alt="Professional handshake in office"
           className="w-full h-full object-cover"
         />
         {/* Dark overlay for text readability */}
@@ -25,7 +27,7 @@ const HeroSection = () => {
       {/* Content Overlay */}
       <div className="relative z-10 h-full flex items-center justify-center">
         <div className="text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-          
+
           {/* Main Heading */}
           <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
@@ -43,16 +45,16 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <div className={`transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              
+
               {/* Post Job Order Button */}
-              <button className="group bg-gray-900 text-white hover:bg-gray-100 hover:text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl min-w-[200px] cursor-pointer">
+              {/* <button className="group bg-gray-900 text-white hover:bg-gray-100 hover:text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl min-w-[200px] cursor-pointer">
                 <span className="group-hover:translate-x-1 transition-transform duration-300 inline-block">
                   Post Job Order
                 </span>
-              </button>
-              
+              </button> */}
+
               {/* Apply Now Button */}
-              <button className="group border-2 border-white bg-white text-black hover:bg-black hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 min-w-[200px] cursor-pointer">
+              <button onClick={() => setOpen(true)} className="group border-2 border-white bg-white text-black hover:bg-black hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 min-w-[200px] cursor-pointer">
                 <span className="group-hover:translate-x-1 transition-transform duration-300 inline-block">
                   Apply Now
                 </span>
@@ -73,6 +75,8 @@ const HeroSection = () => {
           <div className="w-1 h-3 bg-white/80 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
+
+      <PlanRequest isOpen={open} onClose={() => setOpen(false)} />
     </div>
   );
 };

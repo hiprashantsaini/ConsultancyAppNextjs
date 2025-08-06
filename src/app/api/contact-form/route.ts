@@ -88,8 +88,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 // Replace this with your deployed Apps Script web app URL
-// const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby1RsP3-owKPsAMTWduGWDSJMBHzhIPczWM4lCDJ15uj6E2f77m-e0ZkOXPrs5rXPCG/exec';
-const APPS_SCRIPT_URL ='https://script.google.com/macros/s/AKfycbyg42ejlNTJ7WXc510U_eKSXoyQCycZJn9WGkfI4dmJrd7b5ydHkkCSbccS-OloP4EI/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwT6nWW2haPeq2TCW03aC3pXr8V2Un7QDeOo57Ok9JOMnWTNCl1mXOJJAl3CGsilJDunA/exec';// savior hire
+// const APPS_SCRIPT_URL ='https://script.google.com/macros/s/AKfycbyg42ejlNTJ7WXc510U_eKSXoyQCycZJn9WGkfI4dmJrd7b5ydHkkCSbccS-OloP4EI/exec';//my
 
 export async function POST(request: NextRequest) {
   try {
