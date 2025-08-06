@@ -23,17 +23,23 @@ const MeetOurTeam = () => {
         {
             name: "Roshan Agnihotri",
             role: "Founder & CEO",
-            image: "/roshan.png"
+            image: "/roshan.png",
+            email:process.env.NEXT_PUBLIC_SUPPORT_EMAIL,
+            linkedIn : process.env.NEXT_PUBLIC_LINKEDIN_ROSHAN,
         },
         {
             name: "Vansh Yadav",
             role: "Co-Founder",
-            image: "/vansh.png"
+            image: "/vansh.png",
+            email:process.env.NEXT_PUBLIC_SUPPORT_EMAIL,
+            linkedIn : process.env.NEXT_PUBLIC_LINKEDIN_VANSH,
         },
         {
             name: "Yogesh Yadav",
             role: "Co-Founder",
-            image: "/yogesh.png"
+            image: "/yogesh.png",
+            email:process.env.NEXT_PUBLIC_SUPPORT_EMAIL,
+            linkedIn : process.env.NEXT_PUBLIC_LINKEDIN_YOGESH,
         }
     ];
 
@@ -91,12 +97,12 @@ const MeetOurTeam = () => {
                                 
                                 {/* Social Icons */}
                                 <div className="flex gap-3">
-                                    <button className="p-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200">
+                                    <a href={`mailto:${member.email}`} target='_blank'  rel="noopener noreferrer"  className="p-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200">
                                         <Mail size={20} className="text-gray-900" />
-                                    </button>
-                                    <button className="p-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200">
+                                    </a>
+                                    <a href={member.linkedIn} target='_blank' className="p-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200">
                                         <Linkedin size={20} className="text-gray-900" />
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </motion.div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -67,8 +67,8 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
           <div className="flex gap-4">
             {[ 
-              { Icon: Facebook, link: "#" },
-              { Icon: Linkedin, link: "#" },
+              // { Icon: Facebook, link: "#" },
+              { Icon: Linkedin, link: process.env.NEXT_PUBLIC_LINKEDIN_ROSHAN },
               { Icon: Instagram, link: "https://www.instagram.com/saviorhires?igsh=YWQ2dXI4Mjl2b3Vm" },
             ].map(({ Icon, link }, idx) => (
               <motion.a

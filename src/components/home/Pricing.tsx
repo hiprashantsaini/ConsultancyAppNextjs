@@ -384,7 +384,7 @@ const Pricing = () => {
                 {/* CTA Button */}
                 <motion.button
                   onClick={() => setOpen(true)}
-                  className={`w-full py-4 px-6 rounded-2xl font-semibold text-white bg-gradient-to-r ${plan.color} hover:shadow-2xl transition-all duration-300`}
+                  className={`w-full py-4 px-6 rounded-2xl font-semibold text-white bg-gradient-to-r ${plan.color} hover:shadow-2xl transition-all duration-300 cursor-pointer`}
                   whileHover={{
                     scale: 1.05,
                     boxShadow: "0 20px 40px rgba(0,0,0,0.3)"
